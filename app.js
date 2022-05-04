@@ -1,6 +1,7 @@
 // import functions and grab DOM elements
-const shedClick = document.getElementById('shed-button');
-const boulderButton = document.getElementById('boulder');
+const shedButton = document.getElementById('shed-button');
+const boulderButton = document.getElementById('boulder-button');
+const treeButton = document.getElementById('tree-button');
 
 const shedContainer = document.getElementById('Shed-Container');
 const treeContainer = document.getElementById('tree-container');
@@ -10,18 +11,14 @@ const totalEl = document.getElementById('total');
 const winsEl = document.getElementById('wins');
 
 // initialize state
-const hidingPlaces = [
-    'tree'
-    'shed'
-    'boulder'
-];
+const hidingPlaces = ['tree', 'shed', 'boulder'];
 
 let correctGuesses = 0;
 let totalGuesses = 0;
 
 function getRandomItem(arr) {
-    const index = Math.random();
-
+    const index = Math.ceil(Math.random() * 3);
+    
     return arr[index];
 }
 
@@ -54,13 +51,13 @@ shedButton.addEventListener('click', () => {
     handleGuess(correctSpot, 'shed');  
 });
 
-treeButton.addEventListener('submit', () => {
+treeButton.addEventListener('click', () => {
     const correctSpot = getRandomItem(hidingPlaces);
 
     handleGuess(correctSpot, 'tree');  
 });
 
-boulderButton.addEventListener(() => {
+boulderButton.addEventListener('click', () => {
     const correctSpot = getRandomItem(hidingPlaces);
 
     handleGuess(correctSpot, 'boulder');  
