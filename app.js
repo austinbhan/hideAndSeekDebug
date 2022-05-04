@@ -4,7 +4,7 @@ const boulderButton = document.getElementById('boulder');
 
 const shedContainer = document.getElementById('Shed-Container');
 const treeContainer = document.getElementById('tree-container');
-const boulderContainer = document.getElementById('bouldercontainer');
+const boulderContainer = document.getElementById('boulder-container');
 
 const totalEl = document.getElementById('total');
 const winsEl = document.getElementById('wins');
