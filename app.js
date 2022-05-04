@@ -3,7 +3,7 @@ const shedButton = document.getElementById('shed-button');
 const boulderButton = document.getElementById('boulder-button');
 const treeButton = document.getElementById('tree-button');
 
-const shedContainer = document.getElementById('Shed-Container');
+const shedContainer = document.getElementById('shed-container');
 const treeContainer = document.getElementById('tree-container');
 const boulderContainer = document.getElementById('boulder-container');
 
@@ -37,6 +37,12 @@ function handleGuess(userGuess, correctSpot) {
     totalGuesses = totalEl.textContent;
     correctGuesses = winsEl.textContent;
 
+}
+
+function resetStyles() {
+shedContainer.classList.remove('face');
+treeContainer.classList.remove('face');
+boulderContainer.classList.remove('face');
 }
 
 function setStyles() {
