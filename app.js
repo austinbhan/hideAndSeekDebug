@@ -23,7 +23,7 @@ function getRandomItem(arr) {
 }
 
 function handleGuess(userGuess, correctSpot) {
-    resetStyles();
+    
     totalGuesses++;
 
     const correctHidingPlaceEl = document.getElementById(`${correctSpot}-container`);
@@ -31,7 +31,7 @@ function handleGuess(userGuess, correctSpot) {
     correctHidingPlaceEl.classList.add('face');
 
     if (userGuess === correctSpot) {
-        correctGuesses--;
+        correctGuesses++;
     }
 
     totalGuesses = totalEl.textContent;
@@ -40,9 +40,9 @@ function handleGuess(userGuess, correctSpot) {
 }
 
 function resetStyles() {
-shedContainer.classList.remove('face');
-treeContainer.classList.remove('face');
-boulderContainer.classList.remove('face');
+    shedContainer.classList.remove('face');
+    treeContainer.classList.remove('face');
+    boulderContainer.classList.remove('face');
 }
 
 function setStyles() {
